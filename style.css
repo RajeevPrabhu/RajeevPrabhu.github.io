@@ -243,3 +243,38 @@ footer{
     padding:3.5rem 0;
 }
 }
+
+/* Author's Note / Article Card */
+
+.info-card{
+    max-width:850px;
+    margin:5rem auto 0;
+    padding:2.5rem;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(214,180,90,.25);
+    border-radius:18px;
+    box-shadow:var(--shadow);
+}
+
+.info-card h2{
+    font-family:"Cormorant Garamond",serif;
+    color:var(--gold);
+    text-align:center;
+    font-size:2.2rem;
+    margin-bottom:1.8rem;
+}
+
+.info-card p{
+    color:var(--paper);
+    text-align:justify;
+    line-height:2;
+    margin-bottom:1.4rem;
+}
+
+.info-card .quote{
+    text-align:center;
+    color:var(--gold);
+    font-weight:600;
+    font-style:italic;
+    margin-top:2rem;
+}
