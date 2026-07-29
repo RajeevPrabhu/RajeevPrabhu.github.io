@@ -1,5 +1,22 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Serif+Devanagari:wght@400;500;600;700&display=swap');
+/* 
+RajeevPrabhu.github.io
+Literary Theme v1.0
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap');
+
+:root{
+    --bg:#0c1320;
+    --bg2:#172234;
+    --paper:#f5f0e6;
+    --text:#f7f2ea;
+    --muted:#d4cfc4;
+    --gold:#d6b45a;
+    --gold2:#f0d889;
+    --line:rgba(214,180,90,.35);
+    --shadow:0 20px 50px rgba(0,0,0,.35);
+    --radius:18px;
+}
 
 *{
     margin:0;
@@ -12,329 +29,217 @@ html{
 }
 
 body{
-
     background:
-    radial-gradient(circle at top,#24324A 0%,#111827 40%,#0A0F1C 100%);
-
-    color:#F8F4EC;
-
+      radial-gradient(circle at top,#24324a 0%,#142032 35%,#0c1320 100%);
+    color:var(--text);
     font-family:"Noto Serif Devanagari",serif;
-
     min-height:100vh;
-
+    line-height:1.8;
 }
 
-/* Main Container */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.08;
+    background-image:
+      radial-gradient(#ffffff 1px,transparent 1px);
+    background-size:28px 28px;
+}
 
 .container{
-
-    width:min(1000px,90%);
+    width:min(1100px,92%);
     margin:auto;
-
 }
 
-/* Hero */
-
 .hero{
-
-    height:100vh;
-
+    min-height:100vh;
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
-
 }
 
 .symbol{
-
-    color:#D4AF37;
-
-    font-size:40px;
-
-    margin-bottom:20px;
-
+    color:var(--gold);
+    font-size:2rem;
+    margin-bottom:1rem;
 }
 
 .title{
-
-    font-size:72px;
-
-    font-weight:600;
-
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(3.2rem,7vw,5.4rem);
     letter-spacing:2px;
-
+    font-weight:600;
 }
 
 .subtitle{
-
-    margin-top:18px;
-
-    color:#C9C7C1;
-
-    font-size:24px;
-
+    color:var(--muted);
+    margin-top:.7rem;
+    font-size:clamp(1.2rem,2vw,1.6rem);
 }
 
 .quote{
-
-    margin-top:60px;
-
-    max-width:650px;
-
-    line-height:1.8;
-
-    color:#D7D3CA;
-
-    font-size:22px;
-
+    max-width:700px;
+    margin-top:3rem;
+    color:#e3ddd2;
+    font-size:clamp(1.1rem,2vw,1.4rem);
     font-style:italic;
-
 }
 
 .button{
-
-    margin-top:60px;
-
+    margin-top:3rem;
     display:inline-block;
-
+    color:var(--gold);
     text-decoration:none;
-
-    color:white;
-
-    background:#D4AF37;
-
-    padding:18px 42px;
-
-    border-radius:40px;
-
-    transition:.35s;
-
-    font-size:20px;
-
+    border:1px solid var(--gold);
+    padding:.9rem 2rem;
+    border-radius:999px;
+    transition:.3s;
 }
 
 .button:hover{
-
-    background:#E8C96D;
-
-    transform:translateY(-4px);
-
+    background:var(--gold);
+    color:#111;
 }
 
 section{
-
-    padding:100px 0;
-
+    padding:5rem 0;
 }
 
 .section-title{
-
     text-align:center;
-
-    font-size:42px;
-
-    margin-bottom:50px;
-
-    color:#D4AF37;
-
+    font-family:"Cormorant Garamond",serif;
+    color:var(--gold);
+    font-size:clamp(2rem,4vw,3rem);
+    margin-bottom:2.5rem;
 }
 
-/* Cards */
-
 .card{
-
-    background:rgba(255,255,255,.05);
-
-    backdrop-filter:blur(14px);
-
+    background:rgba(255,255,255,.04);
     border:1px solid rgba(255,255,255,.08);
-
-    border-radius:24px;
-
-    padding:35px;
-
-    transition:.4s;
-
+    border-radius:var(--radius);
+    padding:2rem;
+    box-shadow:var(--shadow);
+    transition:.3s;
 }
 
 .card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#D4AF37;
-
+    transform:translateY(-6px);
+    border-color:var(--gold);
 }
 
 .card h3{
-
-    font-size:32px;
-
-    margin-bottom:18px;
-
+    font-size:2rem;
+    margin-bottom:1rem;
 }
 
 .card p{
-
-    color:#D6D2C8;
-
-    line-height:1.9;
-
+    color:var(--muted);
 }
 
 .read{
-
-    margin-top:25px;
-
     display:inline-block;
-
-    color:#D4AF37;
-
+    margin-top:1.3rem;
+    color:var(--gold);
     text-decoration:none;
-
 }
 
-/* Footer */
-
-footer{
-
-    text-align:center;
-
-    padding:70px 0;
-
-    color:#999;
-
+.read:hover{
+    color:var(--gold2);
 }
 
-/* Mobile */
-
-@media(max-width:768px){
-
-.title{
-
-font-size:46px;
-
-}
-
-.subtitle{
-
-font-size:20px;
-
-}
-
-.quote{
-
-font-size:18px;
-
-}
-
-.button{
-
-font-size:18px;
-
-padding:15px 28px;
-
-}
-
-.section-title{
-
-font-size:34px;
-
-}
-
-}
+/* poem page */
 
 .poem-page{
-
-max-width:850px;
-
-padding-top:80px;
-
-padding-bottom:100px;
-
+    width:min(850px,92%);
+    margin:auto;
+    padding:3rem 0 5rem;
 }
 
 .back{
-
-color:#C8A951;
-
-text-decoration:none;
-
-font-size:18px;
-
+    display:inline-block;
+    color:var(--gold);
+    text-decoration:none;
+    margin-bottom:2rem;
 }
 
 .back:hover{
-
-color:white;
-
+    color:var(--gold2);
 }
 
 .poem-header{
-
-text-align:center;
-
-margin-top:60px;
-
-margin-bottom:60px;
-
+    text-align:center;
+    margin-bottom:3rem;
 }
 
 .poem-header h1{
-
-font-size:58px;
-
-font-weight:500;
-
-margin-top:20px;
-
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(3rem,6vw,4.5rem);
+    margin-top:.8rem;
 }
 
 .divider{
-
-width:180px;
-
-height:1px;
-
-background:#C8A951;
-
-margin:25px auto;
-
+    width:180px;
+    height:1px;
+    background:var(--line);
+    margin:1.5rem auto;
 }
 
 .poem{
-
-font-size:28px;
-
-line-height:2.2;
-
-text-align:center;
-
-color:#F8F3E9;
-
+    max-width:640px;
+    margin:auto;
+    font-size:clamp(1.15rem,2vw,1.55rem);
+    line-height:2.1;
+    color:var(--paper);
 }
 
 .poem p{
-
-margin-bottom:55px;
-
+    margin-bottom:2.5rem;
+    text-align:left;
 }
 
 .signature{
+    max-width:640px;
+    margin:4rem auto 0;
+    text-align:right;
+    color:var(--gold);
+    font-size:1.25rem;
+}
 
-margin-top:90px;
+footer{
+    text-align:center;
+    color:#9ca3af;
+    padding:4rem 0;
+    font-size:.95rem;
+}
 
-text-align:right;
+@media (max-width:768px){
 
-font-size:24px;
+.hero{
+    min-height:85vh;
+}
 
-color:#D4AF37;
+.poem{
+    font-size:1.05rem;
+    line-height:1.95;
+}
 
-line-height:1.8;
+.poem p{
+    margin-bottom:2rem;
+}
 
+.signature{
+    font-size:1.05rem;
+}
+
+.card{
+    padding:1.5rem;
+}
+
+.section{
+    padding:3.5rem 0;
+}
 }
